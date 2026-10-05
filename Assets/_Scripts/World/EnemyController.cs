@@ -63,7 +63,7 @@ public class EnemyController : MonoBehaviour
     {
         if (! GameStateManager.Instance.IsRunning())
         {
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
             return;
         }
 
@@ -91,7 +91,7 @@ public class EnemyController : MonoBehaviour
             case EnemyType.Melee when lookAtPlayer:
             {
                 Vector3 direction = ( player.position - transform.position).normalized;
-                rb.velocity = direction * speed;
+                rb.linearVelocity = direction * speed;
                 if(!isSoundPlaying){
                     SoundManager.PlaySound(SoundManager.Sound.EnemyMove, this.transform, true, SoundManager.SoundType.SFX);
                     isSoundPlaying = true;
@@ -107,7 +107,7 @@ public class EnemyController : MonoBehaviour
             }
             case EnemyType.Melee:
             {
-                rb.velocity = Vector3.zero;
+                rb.linearVelocity = Vector3.zero;
                 if(isSoundPlaying){
                 SoundManager.StopSound(SoundManager.Sound.EnemyMove, this.transform);
                 isSoundPlaying = false;

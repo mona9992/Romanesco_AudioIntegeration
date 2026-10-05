@@ -60,7 +60,7 @@ public class PlayerProjectile : MonoBehaviour
     {
         pa = GetComponent<PlayAudio>();
         _rigidBody2D = GetComponent<Rigidbody2D>();
-        _rigidBody2D.velocity = Vector2.zero;
+        _rigidBody2D.linearVelocity = Vector2.zero;
 
         _circleCollider2D = GetComponent<CircleCollider2D>();
         _projectileJuice = GetComponent<ProjectileJuice>();
@@ -160,7 +160,7 @@ public class PlayerProjectile : MonoBehaviour
 
     private void EndFlight()
     {
-        _rigidBody2D.velocity = Vector2.zero;
+        _rigidBody2D.linearVelocity = Vector2.zero;
         _state = ProjectileState.Returning;
         _currentBounceCount = 0;
         ProjectileReturning?.Invoke();
@@ -170,7 +170,7 @@ public class PlayerProjectile : MonoBehaviour
     {
         if (_state == ProjectileState.Flying)
         {
-            _distanceTravelled += _rigidBody2D.velocity.magnitude * Time.deltaTime;
+            _distanceTravelled += _rigidBody2D.linearVelocity.magnitude * Time.deltaTime;
         }
     }
     
@@ -287,12 +287,12 @@ public class PlayerProjectile : MonoBehaviour
     
     private void Bounce(Vector2 normal)
     {
-        _moveDirectionBeforeBounce = _rigidBody2D.velocity.normalized;
+        _moveDirectionBeforeBounce = _rigidBody2D.linearVelocity.normalized;
         _bouncedThisFrame = true;
         
         ProjectileBounce?.Invoke();
         
-        Vector2 newDirection = Vector2.Reflect(_rigidBody2D.velocity.normalized, normal).normalized;
+        Vector2 newDirection = Vector2.Reflect(_rigidBody2D.linearVelocity.normalized, normal).normalized;
         SetProjectileVelocityAndDirection( newDirection * _flySpeed);
         _currentBounceCount++;
     }
@@ -305,7 +305,7 @@ public class PlayerProjectile : MonoBehaviour
 
     private void SetProjectileVelocityAndDirection(Vector2 velocity)
     {
-        _rigidBody2D.velocity = velocity;
+        _rigidBody2D.linearVelocity = velocity;
         transform.up = velocity.normalized;
     }
     

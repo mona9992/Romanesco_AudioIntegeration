@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
     {
         if (GameStateManager.Instance.IsPaused())
         {
-            _rigidBody.velocity = Vector2.zero;
+            _rigidBody.linearVelocity = Vector2.zero;
             return;
         }
         
@@ -100,10 +100,10 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
        _smoothMoveInput = Vector2.SmoothDamp(_moveInput, _smoothMoveInput, ref _smoothMoveVelocity, _smoothAmount);
-       _rigidBody.velocity = _baseSpeed * _moveInput;
+       _rigidBody.linearVelocity = _baseSpeed * _moveInput;
         if (IsPlayerShielding())
         {
-            _rigidBody.velocity *= 1 - ( _shieldSlowPercentage / 100);
+            _rigidBody.linearVelocity *= 1 - ( _shieldSlowPercentage / 100);
         }
         
     }
