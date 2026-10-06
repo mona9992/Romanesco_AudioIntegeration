@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{251EC048-2365-4661-A743-BCD66AED47CF}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Default Work Unit" ID="{251EC048-2365-4661-A743-BCD66AED47CF}" PersistMode="Standalone">
+			<ChildrenList>
+				<PropertyContainer Name="Gameplay" ID="{11FE2C2C-C8DC-4CCB-BC0D-86493A98C5CF}" ShortID="148414">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57C52B02-1226-4516-9080-DB918ED1779D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{343252BC-7940-4465-81B6-0020D76AF0C7}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Folder Name="Player" ID="{DFE4B658-EE62-40E5-89ED-3A4C930E811D}" ShortID="875473505">
+							<ChildrenList>
+								<Sound Name="PlayerProjectile" ID="{3748AAAF-AC38-4937-9276-C83EF885D4FF}" ShortID="233574139">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{57C52B02-1226-4516-9080-DB918ED1779D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{343252BC-7940-4465-81B6-0020D76AF0C7}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PlayerProjectile" ID="{0F63EBD0-2302-46BF-830D-2E563F107506}">
+											<Language>SFX</Language>
+											<AudioFile>PlayerProjectile.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="886560606"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PlayerProjectile" ID="{0F63EBD0-2302-46BF-830D-2E563F107506}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</PropertyContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(ProjectileJuice))]
 public class PlayerProjectile : MonoBehaviour
 {
+    [Header("Wwise")]
+    [SerializeField] private AK.Wwise.Event _fireProjectileSoundEvent;
     [Header("Projectile Settings")]
     [SerializeField] private float _flyRange;
     [SerializeField] private float _flySpeed;
@@ -212,7 +214,8 @@ public class PlayerProjectile : MonoBehaviour
         
         _state = ProjectileState.Flying;
         _distanceTravelled = 0;
-        SoundManager.PlayOneShotSound(SoundManager.Sound.PlayerProjectileFire);
+        //SoundManager.PlayOneShotSound(SoundManager.Sound.PlayerProjectileFire);
+        _fireProjectileSoundEvent.Post(gameObject);
         ShootVFX();
         
         KillCurrentIntersectingEnemies();

@@ -35,7 +35,7 @@ public static class SoundManager
         Music,
         SFX
     }
-
+    
     private static Dictionary<Sound, float> _soundTimer;
     private static GameObject _oneShotSoundGameObject;
     private static AudioSource _oneShotAudioSource;
@@ -92,6 +92,7 @@ public static class SoundManager
             _oneShotAudioSource.PlayOneShot(GetAudioClip(sound));
         }
     }
+    
 
     private static GameObject CreateAndActivateSoundGameObject(Sound sound, Transform parent, bool isLooping, SoundType type, bool isRandom)
     {

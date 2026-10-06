@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3161908922",
+    "Type": "User",
+    "GUID": "{33C1E371-6BBE-44D6-A0E8-23D1DB64CC4F}",
+    "Language": "SFX",
+    "Hash": "{8A81EC3E-9652-45D9-1D80-0DBD903BEA77}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "886560606",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "PlayerProjectile.wav",
+      "CachePath": "49/{49D22621-97AE-130D-063F-23060000D9FD}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1273686667",
+      "Name": "Fire_Projectile_Player",
+      "ObjectPath": "\\Events\\Default Work Unit\\Fire_Projectile_Player",
+      "GUID": "{07D49E4C-8ACF-4426-8B97-698D60818D92}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6158503",
+      "DurationMax": "0.6158503",
+      "MediaRefs": [
+       {
+        "Id": "886560606"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{99E254EA-6807-71DD-D8A9-190CEB2EC902}"
+ }
+}

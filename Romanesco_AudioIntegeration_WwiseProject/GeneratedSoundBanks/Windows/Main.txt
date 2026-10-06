@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1273686667	Fire_Projectile_Player			\Default Work Unit\Fire_Projectile_Player	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	886560606	PlayerProjectile	.cache\49\{49D22621-97AE-130D-063F-23060000D9FD}.wem		\Containers\Default Work Unit\Gameplay\Player\PlayerProjectile		108732
+
