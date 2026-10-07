@@ -10,13 +10,10 @@ public static class SoundManager
     public enum Sound {
         PlayerProjectileFire,
         PlayerProjectileHit,
-        PlayerShieldOpen,
-        PlayerShieldHit,
         PlayerDeath,
         EnemyShoot,
         EnemyMove,
         EnemyDeath,
-        Interactable,
         StartGame,
         Pause,
         GameOver,
@@ -24,6 +21,7 @@ public static class SoundManager
         Music,
         LoseStreak,
         GainStreak,
+        SceneLoad,
         LoginPass,
         LoginFail,
         Portal,
@@ -40,6 +38,7 @@ public static class SoundManager
     private static GameObject _oneShotSoundGameObject;
     private static AudioSource _oneShotAudioSource;
     private static List<GameObject> _playingSounds;
+    private static AK.Wwise.Event _oneShotSoundEvent;
 
     private static GameObject _musicGameObject;
     
@@ -52,7 +51,35 @@ public static class SoundManager
         };
 
     }
-
+    public static void Post(Sound sound, GameObject emitter = null)
+    {
+        AK.Wwise.Event wwiseEvent = GetEvent(sound);
+        if (wwiseEvent != null)
+        {
+            wwiseEvent.Post(emitter != null ? emitter : SoundAssets.i.gameObject);
+        }
+    }
+    public static void Stop(Sound sound, GameObject emitter = null, int fadeMs = 0)
+    {
+        AK.Wwise.Event wwiseEvent = GetEvent(sound);
+        if (wwiseEvent != null)
+        {
+            wwiseEvent.Stop(emitter != null ? emitter : SoundAssets.i.gameObject, fadeMs);
+        }
+    }
+    private static AK.Wwise.Event GetEvent(Sound sound)
+    {
+        foreach (SoundAssets.SoundEvent entry in SoundAssets.i.soundEvents)
+        {
+            if (entry.sound == sound && entry.wwiseEvent.IsValid())
+            {
+                return entry.wwiseEvent;
+            }
+        }
+        Debug.LogError("Sound" + sound + " not found");
+        return null;
+    }
+    
     public static void PlayOneShotSound(Sound sound, Vector3 position)
     {
         
@@ -69,7 +96,7 @@ public static class SoundManager
             }
         };
         AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-        audioSource.clip = GetAudioClip(sound);
+        //audioSource.clip = GetAudioClip(sound);
         audioSource.maxDistance = 100f;
         audioSource.spatialBlend = 1f;
         audioSource.rolloffMode = AudioRolloffMode.Linear;
@@ -78,8 +105,7 @@ public static class SoundManager
         Object.Destroy(soundGameObject, audioSource.clip.length);
     }
 
-    public static void PlayOneShotSound(Sound sound){
-
+    public static void PlayOneShotSound(Sound sound,GameObject gameObject){
         
         if (_oneShotSoundGameObject == null)
         {
@@ -89,7 +115,7 @@ public static class SoundManager
         }
         if (CanPlaySound(sound))
         {
-            _oneShotAudioSource.PlayOneShot(GetAudioClip(sound));
+            //_oneShotAudioSource.PlayOneShot(GetAudioClip(sound));
         }
     }
     
@@ -100,14 +126,14 @@ public static class SoundManager
         {
             transform = { parent = parent }
         };
-        
+        AK.Wwise.Event soundEvent = GetEvent(sound);
         AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
         audioSource.outputAudioMixerGroup = GetAudioMixerGroup(type);
         audioSource.loop = isLooping;
-        if(isRandom)
-        audioSource.clip = GetRandomAudioClip(sound);
-        else
-        audioSource.clip = GetAudioClip(sound);
+        //if(isRandom)
+        //audioSource.clip = GetRandomAudioClip(sound);
+        //else
+        //audioSource.clip = GetAudioClip(sound);
         audioSource.Play();
 
         return soundGameObject;
@@ -138,7 +164,7 @@ public static class SoundManager
         {
             _playingSounds = new List<GameObject>();
         }
-        AudioClip clip = GetRandomAudioClip(sound); 
+        //AudioClip clip = GetRandomAudioClip(sound); 
         _playingSounds.Add(CreateAndActivateSoundGameObject(sound, parent, isLooping, type,true));
     }
     
@@ -181,46 +207,6 @@ public static class SoundManager
         }
     }
     
-    private static AudioClip GetAudioClip(Sound sound)
-    {
-        foreach(SoundAssets.SoundAudioClip soundAudioClip in SoundAssets.i.soundAudioClips)
-        {
-            if(soundAudioClip.sound == sound)
-            {
-                return soundAudioClip.audioClip;
-            } 
-        }
-        Debug.LogError("Sound" + sound + " not found");
-        return null;
-
-    }
-    private static AudioClip GetRandomAudioClip(Sound sound)
-    {
-        foreach(SoundAssets.SoundAudioClips soundAudioClipList in SoundAssets.i.soundAudioClipsList)
-        {
-            if(soundAudioClipList.sound == sound && soundAudioClipList.audioClips.Length>0)
-            {
-                int randomIndex = Random.Range( 0, soundAudioClipList.audioClips.Length );
-
-                return soundAudioClipList.audioClips[randomIndex];
-            } 
-        }
-        Debug.LogError("Sound" + sound + " not found");
-        return null;
-
-    }
-    public static void PlayRandomOneShot(Sound sound)
-    {
-
-        if (_oneShotSoundGameObject == null)
-        {
-             _oneShotSoundGameObject = new GameObject("OneShotSound");
-             _oneShotAudioSource = _oneShotSoundGameObject.AddComponent<AudioSource>();
-             _oneShotAudioSource.outputAudioMixerGroup = SoundAssets.i.Mixer_SFX;
-        }
-        _oneShotAudioSource.PlayOneShot(GetRandomAudioClip(sound));
-
-    }
     
     public static void StopAllPlayingSounds()
     {

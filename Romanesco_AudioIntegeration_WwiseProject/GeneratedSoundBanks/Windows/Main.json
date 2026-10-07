@@ -10,38 +10,420 @@
     "Type": "User",
     "GUID": "{33C1E371-6BBE-44D6-A0E8-23D1DB64CC4F}",
     "Language": "SFX",
-    "Hash": "{8A81EC3E-9652-45D9-1D80-0DBD903BEA77}",
+    "Hash": "{A5262CE1-0297-2B22-5B28-40D03FBB8534}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
     "Media": [
      {
-      "Id": "886560606",
+      "Id": "83115186",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "PlayerProjectile.wav",
+      "ShortName": "LoseStreak.wav",
+      "CachePath": "4B/{4B11528A-B1D3-D073-7AD2-E94BD267D7ED}.wem"
+     },
+     {
+      "Id": "101808808",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Enemy_Shooting-002.wav",
+      "CachePath": "46/{46FAF906-7F20-F410-B70C-7605FC0BCE01}.wem"
+     },
+     {
+      "Id": "185643576",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Enemy_Shooting-001.wav",
+      "CachePath": "FB/{FB59A654-2114-02EF-43E2-2FC815523D99}.wem"
+     },
+     {
+      "Id": "290945462",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI_Shuffle_01.wav",
+      "CachePath": "44/{447ED638-4051-625C-FB25-7590E214B3B8}.wem"
+     },
+     {
+      "Id": "340245751",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI_LoginFail.wav",
+      "CachePath": "C5/{C5499735-9B6E-F5DF-5A55-3440F093725F}.wem"
+     },
+     {
+      "Id": "363615532",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI_SceneLoad.wav",
+      "CachePath": "39/{3994BBEE-810C-A858-87DB-F71BB8B68067}.wem"
+     },
+     {
+      "Id": "415795334",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Player_ProjectileHit_03.wav",
+      "CachePath": "28/{2830742F-CAC8-EF18-B963-EA34A97A2FE2}.wem"
+     },
+     {
+      "Id": "421223786",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Enemy_Move.wav",
+      "CachePath": "36/{36C133E3-473D-B08C-8B9B-80D8E34E4011}.wem"
+     },
+     {
+      "Id": "464971558",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI_LoginPass.wav",
+      "CachePath": "51/{51C650F3-1F7C-A6FD-FD5A-9A9024589B96}.wem"
+     },
+     {
+      "Id": "484635658",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameStart.wav",
+      "CachePath": "9D/{9D30C9BF-E277-C26E-3EFD-944166D2F19D}.wem"
+     },
+     {
+      "Id": "501673063",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GainStreak.wav",
+      "CachePath": "72/{72533C91-7CA3-E071-C5EB-AF8968577639}.wem"
+     },
+     {
+      "Id": "521308909",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GameOver.wav",
+      "CachePath": "D8/{D826BE0B-4C23-8DE1-9668-2B637211AF73}.wem"
+     },
+     {
+      "Id": "660604669",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI_Click.wav",
+      "CachePath": "9D/{9DD649E3-3041-6A4E-3D25-137468F83F00}.wem"
+     },
+     {
+      "Id": "730077792",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI_Ranking.wav",
+      "CachePath": "09/{098D50A5-342E-D2A5-63CF-9A90F7872A01}.wem"
+     },
+     {
+      "Id": "737938010",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Player_ProjectileHit_02.wav",
+      "CachePath": "B1/{B190DD72-8932-FBC6-9A04-74A814C2EA7E}.wem"
+     },
+     {
+      "Id": "769329306",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "PortalSound.wav",
+      "CachePath": "B1/{B1F36FFD-7FEF-BEF4-03E9-260014B42D63}.wem"
+     },
+     {
+      "Id": "790891450",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Enemy_Death.wav",
+      "CachePath": "09/{09A11619-2783-1142-AF06-3E9B291FAD37}.wem"
+     },
+     {
+      "Id": "912552422",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Player_ProjectileFire.wav",
       "CachePath": "49/{49D22621-97AE-130D-063F-23060000D9FD}.wem"
+     },
+     {
+      "Id": "914002263",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Enemy_Shooting-003.wav",
+      "CachePath": "48/{48A681CE-0037-4CA4-A852-542A4081EF4A}.wem"
+     },
+     {
+      "Id": "1026132113",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Player_ProjectileHit_01.wav",
+      "CachePath": "45/{45973C56-6DFE-3E79-2ADA-ABE21D7A0135}.wem"
      }
     ],
     "Events": [
      {
-      "Id": "1273686667",
-      "Name": "Fire_Projectile_Player",
-      "ObjectPath": "\\Events\\Default Work Unit\\Fire_Projectile_Player",
+      "Id": "3046156865",
+      "Name": "Play_Enemy_Death",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Play_Enemy_Death",
+      "GUID": "{282B6DCB-D4F3-4F0C-8BDF-A0E4DAEC464B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.50034016",
+      "DurationMax": "0.50034016",
+      "MediaRefs": [
+       {
+        "Id": "790891450"
+       }
+      ]
+     },
+     {
+      "Id": "2773057570",
+      "Name": "Play_Enemy_Move",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Play_Enemy_Move",
+      "GUID": "{254D2139-A330-4D88-BBDF-4C8EA27A0390}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "421223786"
+       }
+      ]
+     },
+     {
+      "Id": "2294077453",
+      "Name": "Play_GainStreak",
+      "ObjectPath": "\\Events\\Default Work Unit\\Gameplay\\Play_GainStreak",
+      "GUID": "{E0F4C773-A7B0-456A-BB2B-A521EB7544AE}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.09161",
+      "DurationMax": "1.09161",
+      "MediaRefs": [
+       {
+        "Id": "501673063"
+       }
+      ]
+     },
+     {
+      "Id": "3174629258",
+      "Name": "Play_GameOver",
+      "ObjectPath": "\\Events\\Default Work Unit\\Gameplay\\Play_GameOver",
+      "GUID": "{C5BB3AFC-B2B2-4C86-9FD3-B2EEB93CD57D}",
+      "DurationType": "OneShot",
+      "DurationMin": "6.527619",
+      "DurationMax": "6.527619",
+      "MediaRefs": [
+       {
+        "Id": "521308909"
+       }
+      ]
+     },
+     {
+      "Id": "1497459184",
+      "Name": "Play_GameStart",
+      "ObjectPath": "\\Events\\Default Work Unit\\Gameplay\\Play_GameStart",
+      "GUID": "{5A13500B-2E6C-4976-B3F2-4C7B03DB1336}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.69285715",
+      "DurationMax": "0.69285715",
+      "MediaRefs": [
+       {
+        "Id": "484635658"
+       }
+      ]
+     },
+     {
+      "Id": "4140219843",
+      "Name": "Play_LoseStreak",
+      "ObjectPath": "\\Events\\Default Work Unit\\Gameplay\\Play_LoseStreak",
+      "GUID": "{88B744EA-2616-460B-AA15-75AEE80C2B79}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.0076644",
+      "DurationMax": "1.0076644",
+      "MediaRefs": [
+       {
+        "Id": "83115186"
+       }
+      ]
+     },
+     {
+      "Id": "3577209905",
+      "Name": "Play_Player_ProjectileFire",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_Player_ProjectileFire",
       "GUID": "{07D49E4C-8ACF-4426-8B97-698D60818D92}",
       "DurationType": "OneShot",
       "DurationMin": "0.6158503",
       "DurationMax": "0.6158503",
       "MediaRefs": [
        {
-        "Id": "886560606"
+        "Id": "912552422"
        }
       ]
+     },
+     {
+      "Id": "2427113209",
+      "Name": "Play_PortalSound",
+      "ObjectPath": "\\Events\\Default Work Unit\\Gameplay\\Play_PortalSound",
+      "GUID": "{7A2ACA1B-17A4-431A-AFDF-3532CE3656E2}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.31022677",
+      "DurationMax": "0.31022677",
+      "MediaRefs": [
+       {
+        "Id": "769329306"
+       }
+      ]
+     },
+     {
+      "Id": "1224249091",
+      "Name": "Play_RND_Enemy_Shoot",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Play_RND_Enemy_Shoot",
+      "GUID": "{9E36FF57-4800-4AE0-976F-DB6108CFCF8C}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.15746032",
+      "DurationMax": "0.18453515",
+      "MediaRefs": [
+       {
+        "Id": "101808808"
+       },
+       {
+        "Id": "185643576"
+       },
+       {
+        "Id": "914002263"
+       }
+      ]
+     },
+     {
+      "Id": "867501155",
+      "Name": "Play_RND_Player_ProjectileHit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Play_RND_Player_ProjectileHit",
+      "GUID": "{BA91AA7D-1DA5-44AE-9EA5-6BF13028EA3F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.26120183",
+      "DurationMax": "0.31546485",
+      "MediaRefs": [
+       {
+        "Id": "415795334"
+       },
+       {
+        "Id": "737938010"
+       },
+       {
+        "Id": "1026132113"
+       }
+      ]
+     },
+     {
+      "Id": "1749424733",
+      "Name": "Play_UI_Click",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_Click",
+      "GUID": "{74C47313-4CEA-4748-A2D4-3F90B755D19B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.31823128",
+      "DurationMax": "0.31823128",
+      "MediaRefs": [
+       {
+        "Id": "660604669"
+       }
+      ]
+     },
+     {
+      "Id": "1563609534",
+      "Name": "Play_UI_LoginFail",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_LoginFail",
+      "GUID": "{194ACDD1-DA0A-46D0-8563-1B29FF04755D}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.99190474",
+      "DurationMax": "0.99190474",
+      "MediaRefs": [
+       {
+        "Id": "340245751"
+       }
+      ]
+     },
+     {
+      "Id": "3395035529",
+      "Name": "Play_UI_LoginPass",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_LoginPass",
+      "GUID": "{00087838-5141-4F0C-B8D7-0711009E61E1}",
+      "DurationType": "OneShot",
+      "DurationMin": "3.7719955",
+      "DurationMax": "3.7719955",
+      "MediaRefs": [
+       {
+        "Id": "464971558"
+       }
+      ]
+     },
+     {
+      "Id": "1501876387",
+      "Name": "Play_UI_Ranking",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_Ranking",
+      "GUID": "{51B075E2-9BB0-41AD-B9EA-CE389DBCD3F2}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.8287075",
+      "DurationMax": "1.8287075",
+      "MediaRefs": [
+       {
+        "Id": "730077792"
+       }
+      ]
+     },
+     {
+      "Id": "3253771689",
+      "Name": "Play_UI_SceneLoad",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_SceneLoad",
+      "GUID": "{2625E1F5-B1C7-4315-AAA5-2967DE1D967F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.48077098",
+      "DurationMax": "0.48077098",
+      "MediaRefs": [
+       {
+        "Id": "363615532"
+       }
+      ]
+     },
+     {
+      "Id": "1114247248",
+      "Name": "Play_UI_Shuffle_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_Shuffle_01",
+      "GUID": "{278D2C68-A1D7-40EF-90AE-6046E9F28810}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5073242",
+      "DurationMax": "1.5073242",
+      "MediaRefs": [
+       {
+        "Id": "290945462"
+       }
+      ]
+     },
+     {
+      "Id": "3172192928",
+      "Name": "Stop_Enemy_Move",
+      "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Stop_Enemy_Move",
+      "GUID": "{6F07495E-05CE-4945-9FE4-78161C145174}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    }
   ],
-  "FileHash": "{99E254EA-6807-71DD-D8A9-190CEB2EC902}"
+  "FileHash": "{88CCCC0F-B2B1-8943-D7C3-8F36DE4AF079}"
  }
 }

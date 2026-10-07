@@ -26,7 +26,7 @@ public class MedalProvider : MonoBehaviour
 
     public IEnumerator SpawnMedalList(Vector3 position, float delay, float yDistance, List<GameObject> textObjects)
     {
-        SoundManager.PlayOneShotSound(SoundManager.Sound.Ranking);
+        SoundManager.Post(SoundManager.Sound.Ranking);
         int count = 0;
         foreach (var medalType in CalculateMedalTypes())
         {

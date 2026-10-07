@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d8ab179440e694d9c35bbc50ba4a8e, type: 3}
   m_Name: 07D49E4C-8ACF-4426-8B97-698D60818D92
   m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
-  objectName: Fire_Projectile_Player
-  id: 1273686667
+  objectName: Play_Player_ProjectileFire
+  id: 3577209905
   guid: 07D49E4C-8ACF-4426-8B97-698D60818D92
   IsInUserDefinedSoundBank: 1

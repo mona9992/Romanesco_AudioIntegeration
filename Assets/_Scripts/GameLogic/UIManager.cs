@@ -154,7 +154,7 @@ public class UIManager : MonoBehaviour
     private void Pause()
     {
         SoundManager.PauseAllPlayingSounds();
-        SoundManager.PlayOneShotSound(SoundManager.Sound.StartGame);
+        SoundManager.Post(SoundManager.Sound.StartGame);
         StartCoroutine(_cameraManager.BattleTransition(1, true));
         StartCoroutine(SetActiveDelayed(1, true));
         StartCoroutine(SetAnimatingBoolForTime(1));
@@ -163,7 +163,7 @@ public class UIManager : MonoBehaviour
     
     public void Resume()
     {
-        SoundManager.PlayOneShotSound(SoundManager.Sound.StartGame);
+        SoundManager.Post(SoundManager.Sound.StartGame);
         SoundManager.ResumeAllPlayingSounds();
         _pauseMenu.SetActive(false);
         StartCoroutine(_cameraManager.BattleTransition(1, false));
@@ -173,7 +173,7 @@ public class UIManager : MonoBehaviour
     public void GameOverCondition()
     {
         SoundManager.StopAllPlayingSounds();
-        SoundManager.PlayOneShotSound(SoundManager.Sound.PlayerDeath);
+        SoundManager.Post(SoundManager.Sound.PlayerDeath);
         _gameOverVisualEffectPrefab.GetComponent<Animator>().SetTrigger(GameOver);
         _gameOverMenu.SetActive(true);
         _scoreText.enabled = false;
@@ -329,7 +329,7 @@ public class UIManager : MonoBehaviour
         });
     }
     public void PlayButtonSound(){
-        SoundManager.PlayOneShotSound(SoundManager.Sound.ButtonSelect);
+        SoundManager.Post(SoundManager.Sound.ButtonSelect);
     }
 
     private void ShowScoreAdded(int scoreAdded)

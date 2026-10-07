@@ -60,7 +60,7 @@ public class LoginLogic : MonoBehaviour
     }
     
     public void PlayButtonSound(){
-        SoundManager.PlayOneShotSound(SoundManager.Sound.ButtonSelect);
+        SoundManager.Post(SoundManager.Sound.ButtonSelect);
     }
 
     private void ShowLogin()
@@ -89,14 +89,14 @@ public class LoginLogic : MonoBehaviour
 
     private void LoginAnim()
     {
-        SoundManager.PlayOneShotSound(SoundManager.Sound.LoginPass);
+        SoundManager.Post(SoundManager.Sound.LoginPass);
         _loginButtonObject.transform.DOScale(Vector3.zero, 0.5f);
         StartCoroutine(ScrambleLetters(1f, 0.1f));
     }
 
     private void WrongLoginAnim()
     {
-        SoundManager.PlayOneShotSound(SoundManager.Sound.LoginFail);
+        SoundManager.Post(SoundManager.Sound.LoginFail);
         StartCoroutine(WrongInput());
     }
 

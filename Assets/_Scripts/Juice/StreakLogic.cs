@@ -104,7 +104,7 @@ public class StreakLogic : MonoBehaviour
     {
         if (_streakCount % 5 == 0 && _streakCount > 0)
         {
-            SoundManager.PlayOneShotSound(SoundManager.Sound.GainStreak);
+            SoundManager.Post(SoundManager.Sound.GainStreak);
             StartCoroutine(StreakChangeColorFlash(GetCurrentStreakColor()));
         }
     }
@@ -113,7 +113,7 @@ public class StreakLogic : MonoBehaviour
     {
         if (_streakCount > 3)
         {
-            SoundManager.PlayOneShotSound(SoundManager.Sound.LoseStreak);
+            SoundManager.Post(SoundManager.Sound.LoseStreak);
             SpawnStreakEndedIndicator(PlayerController.Instance.transform.position + new Vector3(0 , 0.75f, 0));
         }
         

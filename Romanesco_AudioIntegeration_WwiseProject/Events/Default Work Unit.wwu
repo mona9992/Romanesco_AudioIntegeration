@@ -3,17 +3,212 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{218478AB-7F62-40D5-A5B8-AD7D8C8BA70A}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Fire_Projectile_Player" ID="{07D49E4C-8ACF-4426-8B97-698D60818D92}">
+				<Folder Name="Enemy" ID="{F0020CBD-BE25-4D69-A52B-92BB109ED035}" ShortID="873066176">
 					<ChildrenList>
-						<Action Name="" ID="{83F97823-D9ED-4425-AB4A-ADCF9E86256A}" ShortID="113526820">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="PlayerProjectile" ID="{3748AAAF-AC38-4937-9276-C83EF885D4FF}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Play_Enemy_Death" ID="{282B6DCB-D4F3-4F0C-8BDF-A0E4DAEC464B}">
+							<ChildrenList>
+								<Action Name="" ID="{0926E2B7-30B1-46E3-A884-1C15BD6B8CB9}" ShortID="632197370">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy_Death" ID="{5359C34F-8BCF-4945-8F51-BAF7B6E2384E}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_RND_Enemy_Shoot" ID="{9E36FF57-4800-4AE0-976F-DB6108CFCF8C}">
+							<ChildrenList>
+								<Action Name="" ID="{F7A164C1-82E5-4EDA-A696-D6F6D66EE1BB}" ShortID="492292864">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RND_Enemy_Shoot" ID="{6692C78C-E72A-4BAF-BA99-4C6721592A44}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Enemy_Move" ID="{254D2139-A330-4D88-BBDF-4C8EA27A0390}">
+							<ChildrenList>
+								<Action Name="" ID="{E98995F0-D6B3-4A5B-B6F4-2FEF5ECA042B}" ShortID="1008941826">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy_Move" ID="{CB740005-E79B-4092-BFFB-2F57BA98BF3B}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Enemy_Move" ID="{6F07495E-05CE-4945-9FE4-78161C145174}">
+							<ChildrenList>
+								<Action Name="" ID="{E346E95A-1827-42F1-8A25-56F22668A2CC}" ShortID="208432229">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy_Move" ID="{CB740005-E79B-4092-BFFB-2F57BA98BF3B}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
+				</Folder>
+				<Folder Name="Player" ID="{BDC2B6EA-4A8B-42FB-B651-1059BF885239}" ShortID="28832597">
+					<ChildrenList>
+						<Event Name="Play_Player_ProjectileFire" ID="{07D49E4C-8ACF-4426-8B97-698D60818D92}">
+							<ChildrenList>
+								<Action Name="" ID="{6FE956C0-C52A-4C48-87EC-78F6BA7521B5}" ShortID="549770490">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_ProjectileFire" ID="{3748AAAF-AC38-4937-9276-C83EF885D4FF}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_RND_Player_ProjectileHit" ID="{BA91AA7D-1DA5-44AE-9EA5-6BF13028EA3F}">
+							<ChildrenList>
+								<Action Name="" ID="{E99DB25F-8160-4ED5-BEC3-2FCB88F7D6AA}" ShortID="129274076">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RND_Player_ProjectileHit" ID="{D0505893-DEC3-45A5-B947-2EB3C127407B}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Gameplay" ID="{70A2EF7B-0AB3-4EF4-8D51-DC3722DFD784}" ShortID="405807763">
+					<ChildrenList>
+						<Event Name="Play_GainStreak" ID="{E0F4C773-A7B0-456A-BB2B-A521EB7544AE}">
+							<ChildrenList>
+								<Action Name="" ID="{7F080988-3227-4E82-AC69-A8188DEEE050}" ShortID="391264338">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="GainStreak" ID="{A35C0E17-C11C-47C7-8766-EFE52C135D4D}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_GameOver" ID="{C5BB3AFC-B2B2-4C86-9FD3-B2EEB93CD57D}">
+							<ChildrenList>
+								<Action Name="" ID="{33B8F9D3-3441-4517-AD3B-4346AF553AA1}" ShortID="804327104">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="GameOver" ID="{DA1BE8B9-2021-4959-BCAC-105BFA73F515}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_GameStart" ID="{5A13500B-2E6C-4976-B3F2-4C7B03DB1336}">
+							<ChildrenList>
+								<Action Name="" ID="{9B3A1BF3-0B1D-4E90-B2E9-BB7ECF22E3A4}" ShortID="599171227">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="GameStart" ID="{3C1DFBA2-24FB-49EC-86DD-407F46912F13}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_LoseStreak" ID="{88B744EA-2616-460B-AA15-75AEE80C2B79}">
+							<ChildrenList>
+								<Action Name="" ID="{2B37623F-DFA9-4E4B-842F-A335BAB8581D}" ShortID="184345775">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LoseStreak" ID="{C970A4A2-A4BA-4F58-800E-3CD379D3C943}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_PortalSound" ID="{7A2ACA1B-17A4-431A-AFDF-3532CE3656E2}">
+							<ChildrenList>
+								<Action Name="" ID="{85DEA752-80AF-4F83-ACA1-C2E76FC0D213}" ShortID="101353683">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PortalSound" ID="{04F372EE-49F5-4F32-AE2E-021AC9C0EDD1}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{B66ED4AA-C105-4978-86CB-CF93008A0798}" ShortID="263141446">
+					<ChildrenList>
+						<Event Name="Play_UI_Click" ID="{74C47313-4CEA-4748-A2D4-3F90B755D19B}">
+							<ChildrenList>
+								<Action Name="" ID="{AA5DF6D7-F79F-44B7-803D-01E0550621EB}" ShortID="162877077">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Click" ID="{4E56919E-7C64-421F-BFF7-3860E8C2A7AB}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_LoginFail" ID="{194ACDD1-DA0A-46D0-8563-1B29FF04755D}">
+							<ChildrenList>
+								<Action Name="" ID="{AC3A5D23-DAE9-4072-885F-92703A4339F2}" ShortID="478939332">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_LoginFail" ID="{ECB6DF34-7E53-41A5-8B73-D9321D8302ED}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_LoginPass" ID="{00087838-5141-4F0C-B8D7-0711009E61E1}">
+							<ChildrenList>
+								<Action Name="" ID="{C76B4E6E-4707-4847-8413-FF46216ADA44}" ShortID="497440911">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_LoginPass" ID="{7AAC34B5-84A2-4091-8339-122EEFD59C67}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_Ranking" ID="{51B075E2-9BB0-41AD-B9EA-CE389DBCD3F2}">
+							<ChildrenList>
+								<Action Name="" ID="{AEFB731B-4C3D-4E78-95D4-749065EA0625}" ShortID="1037624099">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Ranking" ID="{17AC7570-1E1D-4C0A-9478-E456884E0ABB}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_SceneLoad" ID="{2625E1F5-B1C7-4315-AAA5-2967DE1D967F}">
+							<ChildrenList>
+								<Action Name="" ID="{FB52270A-190C-4189-925F-22F9077CD727}" ShortID="864412752">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_SceneLoad" ID="{6FE9BB44-BD62-441A-A9C4-9F49984E73F3}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_Shuffle_01" ID="{278D2C68-A1D7-40EF-90AE-6046E9F28810}">
+							<ChildrenList>
+								<Action Name="" ID="{1ABAC347-F7A0-4D52-A1A1-30DFCF23B091}" ShortID="464406291">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Shuffle_01" ID="{FD21D4CD-81C9-4469-8E50-92098D8CB980}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

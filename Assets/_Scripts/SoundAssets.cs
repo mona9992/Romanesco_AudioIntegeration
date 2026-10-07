@@ -17,18 +17,12 @@ public class SoundAssets : MonoBehaviour
     public AudioMixerGroup Mixer_Master;
     public AudioMixerGroup Mixer_Music;
     public AudioMixerGroup Mixer_SFX;
-    public SoundAudioClip[] soundAudioClips;
-    public SoundAudioClips[] soundAudioClipsList;
-
+    public SoundEvent[] soundEvents;
+    
     [System.Serializable]
-    public class SoundAudioClip{
+    public class SoundEvent{
         public SoundManager.Sound sound;
-        public AudioClip audioClip;
-    }
-    [System.Serializable]
-    public class SoundAudioClips {
-        public SoundManager.Sound sound;
-        public AudioClip[] audioClips;
+        public AK.Wwise.Event wwiseEvent;
     }
 
 }

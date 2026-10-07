@@ -42,7 +42,7 @@ public class SceneLoader : MonoBehaviour
     {
         _startPos = _menuTransform.transform.localPosition;
         _startScale = _menuTransform.transform.localScale;
-        SoundManager.PlayOneShotSound(SoundManager.Sound.PlayerShieldOpen);
+        SoundManager.Post(SoundManager.Sound.SceneLoad);
 
         _menuTransform.DOLocalMove(_posGoal, _introSequenceDuration).SetEase(Ease.InOutSine);
         _menuTransform.DOScale(_scaleGoal, _introSequenceDuration).SetEase(Ease.InOutSine);
@@ -54,7 +54,7 @@ public class SceneLoader : MonoBehaviour
     }
     
     public void PlayButtonSound(){
-        SoundManager.PlayOneShotSound(SoundManager.Sound.ButtonSelect);
+        SoundManager.Post(SoundManager.Sound.ButtonSelect);
     }
     
     public void Close()

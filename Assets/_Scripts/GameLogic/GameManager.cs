@@ -40,8 +40,8 @@ public class GameManager : MonoBehaviour
     private void InitializeValuesAndReferences()
     {
         SoundManager.Reset();
-        SoundManager.PlayOneShotSound(SoundManager.Sound.StartGame);
-        SoundManager.PlayRandomSound(SoundManager.Sound.Music, this.transform, true, SoundManager.SoundType.Music);     
+        SoundManager.Post(SoundManager.Sound.StartGame);
+        //SoundManager.PlayRandomSound(SoundManager.Sound.Music, this.transform, true, SoundManager.SoundType.Music);     
         Time.timeScale = 1;
         _timeSinceGameStarted = 0;
         
@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
     {
         if (levelName == "this")
         {
-            SoundManager.PlayOneShotSound(SoundManager.Sound.ButtonSelect);
+            SoundManager.Post(SoundManager.Sound.ButtonSelect);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             return;
         }

@@ -5,8 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(ProjectileJuice))]
 public class PlayerProjectile : MonoBehaviour
 {
-    [Header("Wwise")]
-    [SerializeField] private AK.Wwise.Event _fireProjectileSoundEvent;
     [Header("Projectile Settings")]
     [SerializeField] private float _flyRange;
     [SerializeField] private float _flySpeed;
@@ -214,8 +212,8 @@ public class PlayerProjectile : MonoBehaviour
         
         _state = ProjectileState.Flying;
         _distanceTravelled = 0;
-        //SoundManager.PlayOneShotSound(SoundManager.Sound.PlayerProjectileFire);
-        _fireProjectileSoundEvent.Post(gameObject);
+        SoundManager.Post(SoundManager.Sound.PlayerProjectileFire);
+        //_fireProjectileSoundEvent.Post(gameObject);
         ShootVFX();
         
         KillCurrentIntersectingEnemies();
@@ -399,7 +397,7 @@ public class PlayerProjectile : MonoBehaviour
         
         _state = ProjectileState.Shield;
         _shieldColliderGameObject.SetActive(true);
-        SoundManager.PlaySound(SoundManager.Sound.PlayerShieldOpen,this.transform, true, SoundManager.SoundType.SFX);
+       // SoundManager.PlaySound(SoundManager.Sound.PlayerShieldOpen,this.transform, true, SoundManager.SoundType.SFX);
         _projectileJuice.ShieldOpenAnim();
         
     }
@@ -417,7 +415,7 @@ public class PlayerProjectile : MonoBehaviour
         _state = ProjectileState.Idle;
         _projectileJuice.IdleAnim();
         _shieldColliderGameObject.SetActive(false);
-        SoundManager.StopSound(SoundManager.Sound.PlayerShieldOpen, this.transform);
+        //SoundManager.StopSound(SoundManager.Sound.PlayerShieldOpen, this.transform);
     }
     
 

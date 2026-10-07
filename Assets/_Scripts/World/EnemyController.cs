@@ -93,7 +93,7 @@ public class EnemyController : MonoBehaviour
                 Vector3 direction = ( player.position - transform.position).normalized;
                 rb.linearVelocity = direction * speed;
                 if(!isSoundPlaying){
-                    SoundManager.PlaySound(SoundManager.Sound.EnemyMove, this.transform, true, SoundManager.SoundType.SFX);
+                    SoundManager.Post(SoundManager.Sound.EnemyMove);
                     isSoundPlaying = true;
                 }
 
@@ -140,7 +140,7 @@ public class EnemyController : MonoBehaviour
 
     public void BasicShoot() 
     {       
-        SoundManager.PlayRandomOneShot(SoundManager.Sound.EnemyShoot);
+        SoundManager.Post(SoundManager.Sound.EnemyShoot);
         //pa.PlayOneShotSound(0);
         GameObject newBullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         shootTimedown = true; // Flag to indicate there should be timedown between each shot.
@@ -152,11 +152,11 @@ public class EnemyController : MonoBehaviour
         EnemyDeathWithLocation?.Invoke(transform.position);
         if(isSoundPlaying)
         {
-                SoundManager.StopSound(SoundManager.Sound.EnemyMove, this.transform);
+                //SoundManager.StopSound(SoundManager.Sound.EnemyMove, this.transform);
                 isSoundPlaying = false;
         }
 
-        SoundManager.PlayOneShotSound(SoundManager.Sound.EnemyDeath);
+        SoundManager.Post(SoundManager.Sound.EnemyDeath);
         //pa.PlayOneShotSound(1);
         Destroy(this.gameObject);
     }

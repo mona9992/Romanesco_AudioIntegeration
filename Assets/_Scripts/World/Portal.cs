@@ -12,7 +12,7 @@ public class Portal : MonoBehaviour
             if (!other.gameObject.GetComponent<PlayerController>().teleporting)
             {
                 other.gameObject.GetComponent<PlayerController>().teleporting = true;
-                SoundManager.PlayOneShotSound(SoundManager.Sound.Portal);
+                SoundManager.Post(SoundManager.Sound.Portal);
                 // Teleport the player to the destination portal
                 TeleportPlayer(other.gameObject);
             }
