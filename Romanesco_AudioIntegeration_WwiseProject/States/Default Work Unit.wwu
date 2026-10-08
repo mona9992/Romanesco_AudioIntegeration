@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{4FA9E42C-E490-4E34-948C-12444C62BD96}" SchemaVersion="133">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{4FA9E42C-E490-4E34-948C-12444C62BD96}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{4FA9E42C-E490-4E34-948C-12444C62BD96}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="GameState" ID="{8079E68B-FFC7-4346-AC8E-2FDC7C0E9E86}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{4AAB7DD3-92F4-40A0-A65B-42C276A1DC3A}"/>
+						<State Name="MainMenu" ID="{DBE82CE5-2731-4E1B-83FC-6F8642CBC81F}"/>
+						<State Name="Game" ID="{736AE898-AFCA-4B62-B894-514870A61640}"/>
+						<State Name="PauseMenu" ID="{CC6BDFB1-720D-4F6B-B159-48091CA25E00}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Game" ID="{736AE898-AFCA-4B62-B894-514870A61640}"/>
+							<EndState Name="PauseMenu" ID="{CC6BDFB1-720D-4F6B-B159-48091CA25E00}"/>
+							<Time>0</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="PauseMenu" ID="{CC6BDFB1-720D-4F6B-B159-48091CA25E00}"/>
+							<EndState Name="Game" ID="{736AE898-AFCA-4B62-B894-514870A61640}"/>
+							<Time>0</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

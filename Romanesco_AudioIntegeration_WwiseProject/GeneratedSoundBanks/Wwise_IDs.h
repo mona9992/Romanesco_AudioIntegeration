@@ -13,12 +13,14 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PAUSEALL = 4091047182U;
         static const AkUniqueID PLAY_ENEMY_DEATH = 3046156865U;
         static const AkUniqueID PLAY_ENEMY_MOVE = 2773057570U;
         static const AkUniqueID PLAY_GAINSTREAK = 2294077453U;
         static const AkUniqueID PLAY_GAMEOVER = 3174629258U;
         static const AkUniqueID PLAY_GAMESTART = 1497459184U;
         static const AkUniqueID PLAY_LOSESTREAK = 4140219843U;
+        static const AkUniqueID PLAY_MUSIC_MIX_LOOP_FINAL = 2540745508U;
         static const AkUniqueID PLAY_PLAYER_PROJECTILEFIRE = 3577209905U;
         static const AkUniqueID PLAY_PORTALSOUND = 2427113209U;
         static const AkUniqueID PLAY_RND_ENEMY_SHOOT = 1224249091U;
@@ -29,21 +31,31 @@ namespace AK
         static const AkUniqueID PLAY_UI_RANKING = 1501876387U;
         static const AkUniqueID PLAY_UI_SCENELOAD = 3253771689U;
         static const AkUniqueID PLAY_UI_SHUFFLE_01 = 1114247248U;
+        static const AkUniqueID RESUMEALL = 3240900869U;
         static const AkUniqueID STOP_ENEMY_MOVE = 3172192928U;
+        static const AkUniqueID STOPALL = 3086540886U;
     } // namespace EVENTS
 
     namespace SWITCHES
     {
-        namespace ENEMYMOVE
+        namespace GAMESTATE_SWITCH
         {
-            static const AkUniqueID GROUP = 3914866468U;
+            static const AkUniqueID GROUP = 3915115209U;
 
             namespace SWITCH
             {
+                static const AkUniqueID GAME = 702482391U;
+                static const AkUniqueID MENU = 2607556080U;
             } // namespace SWITCH
-        } // namespace ENEMYMOVE
+        } // namespace GAMESTATE_SWITCH
 
     } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID MUSIC_BUS_VOLUME = 79699294U;
+        static const AkUniqueID SFX_BUS_VOLOME = 580190592U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

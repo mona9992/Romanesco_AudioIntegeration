@@ -8,16 +8,19 @@ public class SoundAssets : MonoBehaviour
     private static SoundAssets _i;
 
     public static SoundAssets i{
-        get { 
-            if( _i == null ) _i =Instantiate(Resources.Load<SoundAssets>("SoundAssets"));
+        get {
+            if (_i == null)
+            {
+                _i =Instantiate(Resources.Load<SoundAssets>("SoundAssets"));
+            }
             return _i; 
             }
     }
-    public AudioMixer Mixer;
-    public AudioMixerGroup Mixer_Master;
-    public AudioMixerGroup Mixer_Music;
-    public AudioMixerGroup Mixer_SFX;
+    
+    public AK.Wwise.RTPC MusicBusVolume;
+    public AK.Wwise.RTPC SFXBusVolume;
     public SoundEvent[] soundEvents;
+
     
     [System.Serializable]
     public class SoundEvent{

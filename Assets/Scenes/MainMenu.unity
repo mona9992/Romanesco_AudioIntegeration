@@ -3651,34 +3651,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ddc2e7428c7b0458aac4374a0c5c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioMixer: {fileID: 24100000, guid: 0c5f97f6d226b1549bbb4687dd9eb806, type: 2}
   _musicDict:
   - VolumeAmount: 0
-    MixerAmount: -80
+    BusAmount: 0
   - VolumeAmount: 1
-    MixerAmount: -40
+    BusAmount: 10
   - VolumeAmount: 2
-    MixerAmount: -30
+    BusAmount: 20
   - VolumeAmount: 3
-    MixerAmount: -20
+    BusAmount: 30
   - VolumeAmount: 4
-    MixerAmount: -10
+    BusAmount: 40
   - VolumeAmount: 5
-    MixerAmount: 0
-  _vfXDict:
+    BusAmount: 50
+  _sfXDict:
   - VolumeAmount: 0
-    MixerAmount: -80
+    BusAmount: 0
   - VolumeAmount: 1
-    MixerAmount: -40
+    BusAmount: 10
   - VolumeAmount: 2
-    MixerAmount: -30
+    BusAmount: 20
   - VolumeAmount: 3
-    MixerAmount: -10
+    BusAmount: 30
   - VolumeAmount: 4
-    MixerAmount: 0
+    BusAmount: 40
   - VolumeAmount: 5
-    MixerAmount: 7
-  _vfxDisplay: {fileID: 1818553080}
+    BusAmount: 50
+  _sfxDisplay: {fileID: 1818553080}
   _musicDisplay: {fileID: 1769135900}
   _maxAmount: 5
 --- !u!1 &1256650915

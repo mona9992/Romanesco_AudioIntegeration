@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d8ab179440e694d9c35bbc50ba4a8e, type: 3}
+  m_Name: C28928DB-0266-4E79-A30C-9BC2329071F9
+  m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
+  objectName: Play_Music_Mix_Loop_Final
+  id: 2540745508
+  guid: C28928DB-0266-4E79-A30C-9BC2329071F9
+  IsInUserDefinedSoundBank: 1

@@ -93,24 +93,21 @@ public class EnemyController : MonoBehaviour
                 Vector3 direction = ( player.position - transform.position).normalized;
                 rb.linearVelocity = direction * speed;
                 if(!isSoundPlaying){
-                    SoundManager.Post(SoundManager.Sound.EnemyMove);
+                    
+                    SoundManager.Post(SoundManager.Sound.EnemyMove, this.gameObject);
                     isSoundPlaying = true;
                 }
-
-
-                /*if (!GetComponent<AudioSource>().isPlaying) 
-                {
-                    GetComponent<AudioSource>().clip = meleeAttackSound;
-                    GetComponent<AudioSource>().Play();
-                }*/
+                
                 break;
             }
             case EnemyType.Melee:
             {
                 rb.linearVelocity = Vector3.zero;
                 if(isSoundPlaying){
-                SoundManager.StopSound(SoundManager.Sound.EnemyMove, this.transform);
+                    
+                SoundManager.Stop(SoundManager.Sound.EnemyStop, this.gameObject);
                 isSoundPlaying = false;
+                
                 }
 
                 break;
@@ -140,8 +137,7 @@ public class EnemyController : MonoBehaviour
 
     public void BasicShoot() 
     {       
-        SoundManager.Post(SoundManager.Sound.EnemyShoot);
-        //pa.PlayOneShotSound(0);
+        SoundManager.Post(SoundManager.Sound.EnemyShoot, gameObject);
         GameObject newBullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         shootTimedown = true; // Flag to indicate there should be timedown between each shot.
     }
@@ -152,7 +148,7 @@ public class EnemyController : MonoBehaviour
         EnemyDeathWithLocation?.Invoke(transform.position);
         if(isSoundPlaying)
         {
-                //SoundManager.StopSound(SoundManager.Sound.EnemyMove, this.transform);
+                SoundManager.Stop(SoundManager.Sound.EnemyStop, this.gameObject);
                 isSoundPlaying = false;
         }
 

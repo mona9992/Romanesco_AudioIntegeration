@@ -43,6 +43,8 @@
 								<Action Name="" ID="{E346E95A-1827-42F1-8A25-56F22668A2CC}" ShortID="208432229">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -209,6 +211,17 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_Music_Mix_Loop_Final" ID="{C28928DB-0266-4E79-A30C-9BC2329071F9}">
+					<ChildrenList>
+						<Action Name="" ID="{D504D235-CBA9-460E-983C-9D715001F7D0}" ShortID="338120758">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Mix_Loop_Final" ID="{A87167FC-DA7A-48D6-93DB-637FE0F2CCAB}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

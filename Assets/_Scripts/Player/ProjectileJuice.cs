@@ -55,7 +55,7 @@ public class ProjectileJuice : MonoBehaviour
         
         ColorsController.Instance.StartProjectileColorFlash();
         
-        SoundManager.Post(SoundManager.Sound.PlayerProjectileHit);
+        SoundManager.Post(SoundManager.Sound.PlayerProjectileHit, gameObject);
     }
 
     public void SparkEffect(Vector2 pos, Vector2 dir)

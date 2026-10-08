@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         SoundManager.Reset();
         SoundManager.Post(SoundManager.Sound.StartGame);
-        //SoundManager.PlayRandomSound(SoundManager.Sound.Music, this.transform, true, SoundManager.SoundType.Music);     
+        SoundManager.Post(SoundManager.Sound.Music, this.gameObject);     
         Time.timeScale = 1;
         _timeSinceGameStarted = 0;
         
@@ -55,11 +55,9 @@ public class GameManager : MonoBehaviour
         _hotSpot = new Vector2(_cursorTexture.width / 2f, _cursorTexture.height / 2f);
         Cursor.SetCursor(_cursorTexture, _hotSpot, CursorMode);
     }
-
     
     void Update()
     {
-        
         if (  ( Input.GetKeyDown(KeyCode.P) ||  Input.GetKeyDown(KeyCode.Escape) )  && !UIManager.Instance._currentlyAnimatingPauseMenu && !GameStateManager.Instance.IsGameOver())
         {
             if (GameStateManager.Instance.IsRunning() )

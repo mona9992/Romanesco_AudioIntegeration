@@ -44,10 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c98423736536bf4498bffdd77f03d866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundAssets
-  Mixer: {fileID: 24100000, guid: 0c5f97f6d226b1549bbb4687dd9eb806, type: 2}
-  Mixer_Master: {fileID: 24300002, guid: 0c5f97f6d226b1549bbb4687dd9eb806, type: 2}
-  Mixer_Music: {fileID: -6787989812803694217, guid: 0c5f97f6d226b1549bbb4687dd9eb806, type: 2}
-  Mixer_SFX: {fileID: -685356079535717691, guid: 0c5f97f6d226b1549bbb4687dd9eb806, type: 2}
+  MusicBusVolume:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bbc4381894b49ee4da7c9a175c8bf0ab, type: 2}
+  SFXBusVolume:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a2fcc64f4d750404490878c7b87c409d, type: 2}
   soundEvents:
   - sound: 0
     wwiseEvent:
@@ -129,3 +133,44 @@ MonoBehaviour:
       idInternal: 0
       valueGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: 84ab2dfcce466b348b19a69b6fd4ae2f, type: 2}
+  - sound: 19
+    wwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 666d2c44b99dfb240a894cddde073512, type: 2}
+  - sound: 10
+    wwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 9cc3fa7ae6f249a4ea075491f9c1ed09, type: 2}
+  - sound: 7
+    wwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: bf9727c0fa5c4a94b82ca3b02505f10e, type: 2}
+  - sound: 8
+    wwiseEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: dbb39ad8b885bb74a847d16695ce7411, type: 2}
+  menuState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 97d2dfffdcad3224e9ed72f1b4cf0e88, type: 2}
+  gameplayState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 28688f764f9d09742aa74775462400ab, type: 2}
+  _pauseAllEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bf9727c0fa5c4a94b82ca3b02505f10e, type: 2}
+  _gameOverEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1d062fb1311e3254abce97c293e2dda2, type: 2}
+  _globalEmitter: {fileID: 0}

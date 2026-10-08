@@ -20,6 +20,7 @@
 						<ObjectRef Name="Play_RND_Enemy_Shoot" ID="{9E36FF57-4800-4AE0-976F-DB6108CFCF8C}" WorkUnitID="{218478AB-7F62-40D5-A5B8-AD7D8C8BA70A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_GameOver" ID="{C5BB3AFC-B2B2-4C86-9FD3-B2EEB93CD57D}" WorkUnitID="{218478AB-7F62-40D5-A5B8-AD7D8C8BA70A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Enemy_Move" ID="{254D2139-A330-4D88-BBDF-4C8EA27A0390}" WorkUnitID="{218478AB-7F62-40D5-A5B8-AD7D8C8BA70A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Music_Mix_Loop_Final" ID="{C28928DB-0266-4E79-A30C-9BC2329071F9}" WorkUnitID="{218478AB-7F62-40D5-A5B8-AD7D8C8BA70A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UI_LoginPass" ID="{00087838-5141-4F0C-B8D7-0711009E61E1}" WorkUnitID="{218478AB-7F62-40D5-A5B8-AD7D8C8BA70A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Enemy_Death" ID="{282B6DCB-D4F3-4F0C-8BDF-A0E4DAEC464B}" WorkUnitID="{218478AB-7F62-40D5-A5B8-AD7D8C8BA70A}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

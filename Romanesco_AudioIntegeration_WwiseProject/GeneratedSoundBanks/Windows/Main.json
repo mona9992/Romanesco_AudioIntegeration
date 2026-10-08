@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{33C1E371-6BBE-44D6-A0E8-23D1DB64CC4F}",
     "Language": "SFX",
-    "Hash": "{A5262CE1-0297-2B22-5B28-40D03FBB8534}",
+    "Hash": "{F27D5FE7-08CB-52B8-8B48-6485FFC48484}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -152,6 +152,14 @@
       "CachePath": "09/{09A11619-2783-1142-AF06-3E9B291FAD37}.wem"
      },
      {
+      "Id": "844777592",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Music_Mix_Loop_Final.wav",
+      "CachePath": "80/{806B8496-E919-9648-3250-CFAD51A31F4B}.wem"
+     },
+     {
       "Id": "912552422",
       "Language": "SFX",
       "Streaming": "false",
@@ -177,6 +185,16 @@
      }
     ],
     "Events": [
+     {
+      "Id": "4091047182",
+      "Name": "PauseAll",
+      "ObjectPath": "\\Events\\Default Work Unit\\PauseAll",
+      "GUID": "{5B06839D-3739-4000-94BB-0B40219E1A2F}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
      {
       "Id": "3046156865",
       "Name": "Play_Enemy_Death",
@@ -256,6 +274,20 @@
       "MediaRefs": [
        {
         "Id": "83115186"
+       }
+      ]
+     },
+     {
+      "Id": "2540745508",
+      "Name": "Play_Music_Mix_Loop_Final",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Music_Mix_Loop_Final",
+      "GUID": "{C28928DB-0266-4E79-A30C-9BC2329071F9}",
+      "DurationType": "OneShot",
+      "DurationMin": "206",
+      "DurationMax": "206",
+      "MediaRefs": [
+       {
+        "Id": "844777592"
        }
       ]
      },
@@ -412,6 +444,16 @@
       ]
      },
      {
+      "Id": "3240900869",
+      "Name": "ResumeAll",
+      "ObjectPath": "\\Events\\Default Work Unit\\ResumeAll",
+      "GUID": "{9DC2C24D-D8C7-4C7D-A3CD-028D39E4EC46}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
       "Id": "3172192928",
       "Name": "Stop_Enemy_Move",
       "ObjectPath": "\\Events\\Default Work Unit\\Enemy\\Stop_Enemy_Move",
@@ -420,10 +462,20 @@
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
+     },
+     {
+      "Id": "3086540886",
+      "Name": "StopAll",
+      "ObjectPath": "\\Events\\Default Work Unit\\StopAll",
+      "GUID": "{8CE709AB-F2A2-4CB1-9CC5-B5F6CD27AD50}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    }
   ],
-  "FileHash": "{88CCCC0F-B2B1-8943-D7C3-8F36DE4AF079}"
+  "FileHash": "{04B7801A-3386-28E8-ACED-3BD60A50BF86}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{516733B5-BF45-443A-0A4A-B9DFB3A88722}",
+    "Hash": "{CEF20D24-C94B-3CED-5E11-D66AE769FFFA}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -54,17 +54,44 @@
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
      }
     ],
+    "GameParameters": [
+     {
+      "Id": "79699294",
+      "Name": "Music_Bus_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Music_Bus_Volume",
+      "GUID": "{E3929453-921C-4B51-A119-1289E15BFA0A}"
+     },
+     {
+      "Id": "580190592",
+      "Name": "SFX_Bus_Volome",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\SFX_Bus_Volome",
+      "GUID": "{315AAA3B-C558-4EF0-B13F-DEDC788B1D99}"
+     }
+    ],
     "SwitchGroups": [
      {
-      "Id": "3914866468",
-      "Name": "EnemyMove",
-      "ObjectPath": "\\Switches\\Default Work Unit\\EnemyMove",
-      "GUID": "{6E7D7D6D-BDC1-4CA4-B552-CE64E91016A7}",
-      "Switches": []
+      "Id": "3915115209",
+      "Name": "GameState_Switch",
+      "ObjectPath": "\\Switches\\Default Work Unit\\GameState_Switch",
+      "GUID": "{A6CC6FD7-6BF1-4AED-AEA2-47D7950192AB}",
+      "Switches": [
+       {
+        "Id": "702482391",
+        "Name": "Game",
+        "ObjectPath": "\\Switches\\Default Work Unit\\GameState_Switch\\Game",
+        "GUID": "{D08EFBE2-2A76-46A0-B38F-CAAEF937CE73}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "Menu",
+        "ObjectPath": "\\Switches\\Default Work Unit\\GameState_Switch\\Menu",
+        "GUID": "{9BA170CD-2372-4E8E-AC00-9ABAE9CE3AFE}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{4DD3D4CF-85E8-39DF-BBCB-78707E13863A}"
+  "FileHash": "{E2B10000-9623-465C-7959-7A12BBC7186E}"
  }
 }

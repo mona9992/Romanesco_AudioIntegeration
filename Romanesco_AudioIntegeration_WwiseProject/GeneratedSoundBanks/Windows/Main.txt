@@ -8,13 +8,17 @@ Event	ID	Name			Wwise Object Path	Notes
 	1749424733	Play_UI_Click			\Default Work Unit\UI\Play_UI_Click	
 	2294077453	Play_GainStreak			\Default Work Unit\Gameplay\Play_GainStreak	
 	2427113209	Play_PortalSound			\Default Work Unit\Gameplay\Play_PortalSound	
+	2540745508	Play_Music_Mix_Loop_Final			\Default Work Unit\Play_Music_Mix_Loop_Final	
 	2773057570	Play_Enemy_Move			\Default Work Unit\Enemy\Play_Enemy_Move	
 	3046156865	Play_Enemy_Death			\Default Work Unit\Enemy\Play_Enemy_Death	
+	3086540886	StopAll			\Default Work Unit\StopAll	
 	3172192928	Stop_Enemy_Move			\Default Work Unit\Enemy\Stop_Enemy_Move	
 	3174629258	Play_GameOver			\Default Work Unit\Gameplay\Play_GameOver	
+	3240900869	ResumeAll			\Default Work Unit\ResumeAll	
 	3253771689	Play_UI_SceneLoad			\Default Work Unit\UI\Play_UI_SceneLoad	
 	3395035529	Play_UI_LoginPass			\Default Work Unit\UI\Play_UI_LoginPass	
 	3577209905	Play_Player_ProjectileFire			\Default Work Unit\Player\Play_Player_ProjectileFire	
+	4091047182	PauseAll			\Default Work Unit\PauseAll	
 	4140219843	Play_LoseStreak			\Default Work Unit\Gameplay\Play_LoseStreak	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
@@ -35,6 +39,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	737938010	Player_ProjectileHit_02	.cache\B1\{B190DD72-8932-FBC6-9A04-74A814C2EA7E}.wem		\Containers\Default Work Unit\Player\RND_Player_ProjectileHit\Player_ProjectileHit_02		46172
 	769329306	PortalSound	.cache\B1\{B1F36FFD-7FEF-BEF4-03E9-260014B42D63}.wem		\Containers\Default Work Unit\Gameplay\PortalSound		54820
 	790891450	Enemy_Death	.cache\09\{09A11619-2783-1142-AF06-3E9B291FAD37}.wem		\Containers\Default Work Unit\Enemy\Enemy_Death		88356
+	844777592	Music_Mix_Loop_Final	.cache\80\{806B8496-E919-9648-3250-CFAD51A31F4B}.wem		\Containers\Default Work Unit\Music_Mix_Loop_Final\Music_Mix_Loop_Final		36338496
 	912552422	Player_ProjectileFire	.cache\49\{49D22621-97AE-130D-063F-23060000D9FD}.wem		\Containers\Default Work Unit\Player\Player_ProjectileFire		108732
 	914002263	Enemy_Shooting-003	.cache\48\{48A681CE-0037-4CA4-A852-542A4081EF4A}.wem		\Containers\Default Work Unit\Enemy\RND_Enemy_Shoot\Enemy_Shooting-003		31016
 	1026132113	Player_ProjectileHit_01	.cache\45\{45973C56-6DFE-3E79-2ADA-ABE21D7A0135}.wem		\Containers\Default Work Unit\Player\RND_Player_ProjectileHit\Player_ProjectileHit_01		55744

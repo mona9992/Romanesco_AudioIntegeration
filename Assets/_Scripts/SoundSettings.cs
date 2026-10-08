@@ -1,43 +1,39 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 
 
 public class SoundSettings : MonoBehaviour
 {
-    [SerializeField] private AudioMixer _audioMixer;
     
     private const string MusicVolumeID = "MusicVolume";
     private const string SfxVolumeID = "SFXVolume";
 
     [SerializeField] private List<MixerVolumeDict> _musicDict;
-    [SerializeField] private List<MixerVolumeDict> _vfXDict;
+    [SerializeField] private List<MixerVolumeDict> _sfXDict;
 
-    [SerializeField] private BarDisplay _vfxDisplay;
+    [SerializeField] private BarDisplay _sfxDisplay;
     [SerializeField] private BarDisplay _musicDisplay;
     
     [Serializable]
     private struct MixerVolumeDict
     {
         public int VolumeAmount;
-        public float MixerAmount;
+        public float BusAmount;
     }
     
     private int _currentMusicAmount;
-    private int _currentVfxAmount;
+    private int _currentSfxAmount;
 
     [SerializeField] private int _maxAmount;
     
     private void Start()
     {
-        _audioMixer = SoundAssets.i.Mixer;
-
         _currentMusicAmount = GetAmountFromVolume(_musicDict, GetMusicVolume());
-        _currentVfxAmount = GetAmountFromVolume(_vfXDict, GetVfxVolume());
+        _currentSfxAmount = GetAmountFromVolume(_sfXDict, GetSfxVolume());
         
         _musicDisplay.Initialize(_currentMusicAmount);
-        _vfxDisplay.Initialize(_currentVfxAmount);
+        _sfxDisplay.Initialize(_currentSfxAmount);
     }
 
     public void IncreaseMusicVolume()
@@ -68,28 +64,28 @@ public class SoundSettings : MonoBehaviour
     
     public void IncreaseVfxVolume()
     {
-        if (_currentVfxAmount >= _maxAmount)
+        if (_currentSfxAmount >= _maxAmount)
         {
             return;
         }
         
-        _currentVfxAmount++;
-        SetSfxVolume(GetVolumeFromAmount(_vfXDict, _currentVfxAmount));
+        _currentSfxAmount++;
+        SetSfxVolume(GetVolumeFromAmount(_sfXDict, _currentSfxAmount));
         
-        _vfxDisplay.SetListFromAmountWithAnim(_currentVfxAmount);
+        _sfxDisplay.SetListFromAmountWithAnim(_currentSfxAmount);
     }
 
     public void DecreaseVfxVolume()
     {
-        if (_currentVfxAmount < 1)
+        if (_currentSfxAmount < 1)
         {
             return;
         }
         
-        _currentVfxAmount--;
-        SetSfxVolume(GetVolumeFromAmount(_vfXDict, _currentVfxAmount));
+        _currentSfxAmount--;
+        SetSfxVolume(GetVolumeFromAmount(_sfXDict, _currentSfxAmount));
         
-        _vfxDisplay.SetListFromAmountWithAnim(_currentVfxAmount);
+        _sfxDisplay.SetListFromAmountWithAnim(_currentSfxAmount);
     }
 
     private float GetVolumeFromAmount(List<MixerVolumeDict> map, int amount)
@@ -98,7 +94,7 @@ public class SoundSettings : MonoBehaviour
         {
             if (data.VolumeAmount == amount)
             {
-                return data.MixerAmount;
+                return data.BusAmount;
             }
         }
 
@@ -109,7 +105,7 @@ public class SoundSettings : MonoBehaviour
     {
         foreach (var data in map)
         {
-            if (Math.Abs(data.MixerAmount - volume) < 0.01f)
+            if (Math.Abs(data.BusAmount - volume) < 0.01f)
             {
                 return data.VolumeAmount;
             }
@@ -120,23 +116,23 @@ public class SoundSettings : MonoBehaviour
 
     private void SetMusicVolume(float newValue)
     {
-        _audioMixer.SetFloat(MusicVolumeID, newValue);
+        SoundAssets.i.MusicBusVolume.SetGlobalValue(newValue);
     }
     
     private void SetSfxVolume(float newValue)
     {
-        _audioMixer.SetFloat(SfxVolumeID, newValue);
+        SoundAssets.i.SFXBusVolume.SetGlobalValue(newValue);
     }
 
     private float GetMusicVolume()
     {
-        _audioMixer.GetFloat(MusicVolumeID, out var returnVal );
+        float returnVal = SoundAssets.i.MusicBusVolume.GetGlobalValue();
         return returnVal;
     }
     
-    private float GetVfxVolume()
+    private float GetSfxVolume()
     {
-        _audioMixer.GetFloat(SfxVolumeID, out var returnVal );
+        float returnVal = SoundAssets.i.SFXBusVolume.GetGlobalValue();
         return returnVal;
     }
 }

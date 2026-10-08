@@ -18,7 +18,6 @@ public class PlayerProjectile : MonoBehaviour
     [SerializeField] private float _shieldDistanceToPlayer;
 
     // Get set in start
-    private PlayAudio pa;
     private Rigidbody2D _rigidBody2D;
     private CircleCollider2D _circleCollider2D;
     private PlayerController _playerController;
@@ -58,7 +57,7 @@ public class PlayerProjectile : MonoBehaviour
     
     private void Start()
     {
-        pa = GetComponent<PlayAudio>();
+
         _rigidBody2D = GetComponent<Rigidbody2D>();
         _rigidBody2D.linearVelocity = Vector2.zero;
 
@@ -212,7 +211,7 @@ public class PlayerProjectile : MonoBehaviour
         
         _state = ProjectileState.Flying;
         _distanceTravelled = 0;
-        SoundManager.Post(SoundManager.Sound.PlayerProjectileFire);
+        SoundManager.Post(SoundManager.Sound.PlayerProjectileFire, gameObject);
         //_fireProjectileSoundEvent.Post(gameObject);
         ShootVFX();
         

@@ -3,7 +3,12 @@
 	<Switches>
 		<WorkUnit Name="Default Work Unit" ID="{C3D335AC-28E6-4614-BF78-FD5681A42BC3}" PersistMode="Standalone">
 			<ChildrenList>
-				<SwitchGroup Name="EnemyMove" ID="{6E7D7D6D-BDC1-4CA4-B552-CE64E91016A7}"/>
+				<SwitchGroup Name="GameState_Switch" ID="{A6CC6FD7-6BF1-4AED-AEA2-47D7950192AB}">
+					<ChildrenList>
+						<Switch Name="Game" ID="{D08EFBE2-2A76-46A0-B38F-CAAEF937CE73}"/>
+						<Switch Name="Menu" ID="{9BA170CD-2372-4E8E-AC00-9ABAE9CE3AFE}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>
