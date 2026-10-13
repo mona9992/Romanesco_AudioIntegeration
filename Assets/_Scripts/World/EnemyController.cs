@@ -137,7 +137,7 @@ public class EnemyController : MonoBehaviour
 
     public void BasicShoot() 
     {       
-        SoundManager.Post(SoundManager.Sound.EnemyShoot, gameObject);
+        SoundManager.Post(SoundManager.Sound.EnemyShoot);
         GameObject newBullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         shootTimedown = true; // Flag to indicate there should be timedown between each shot.
     }

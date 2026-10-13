@@ -32,7 +32,7 @@
 								<Action Name="" ID="{E98995F0-D6B3-4A5B-B6F4-2FEF5ECA042B}" ShortID="1008941826">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Enemy_Move" ID="{CB740005-E79B-4092-BFFB-2F57BA98BF3B}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+											<ObjectRef Name="Enemy_Move" ID="{097E4916-9845-4CA2-A796-97E232735870}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -48,7 +48,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Enemy_Move" ID="{CB740005-E79B-4092-BFFB-2F57BA98BF3B}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+											<ObjectRef Name="Enemy_Move" ID="{097E4916-9845-4CA2-A796-97E232735870}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -122,7 +122,7 @@
 								<Action Name="" ID="{2B37623F-DFA9-4E4B-842F-A335BAB8581D}" ShortID="184345775">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="LoseStreak" ID="{C970A4A2-A4BA-4F58-800E-3CD379D3C943}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+											<ObjectRef Name="LoseStreak" ID="{FB8235E7-EAFF-451B-9F29-001CF50801DB}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -181,7 +181,7 @@
 								<Action Name="" ID="{AEFB731B-4C3D-4E78-95D4-749065EA0625}" ShortID="1037624099">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="UI_Ranking" ID="{17AC7570-1E1D-4C0A-9478-E456884E0ABB}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+											<ObjectRef Name="UI_Ranking" ID="{4193589E-9E9B-4710-BDC1-B68E1FA6D338}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -198,12 +198,12 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_UI_Shuffle_01" ID="{278D2C68-A1D7-40EF-90AE-6046E9F28810}">
+						<Event Name="Play_UI_Shuffle" ID="{278D2C68-A1D7-40EF-90AE-6046E9F28810}">
 							<ChildrenList>
 								<Action Name="" ID="{1ABAC347-F7A0-4D52-A1A1-30DFCF23B091}" ShortID="464406291">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="UI_Shuffle_01" ID="{FD21D4CD-81C9-4469-8E50-92098D8CB980}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
+											<ObjectRef Name="UI_Shuffle" ID="{09545ED8-056B-4FC4-8786-4363E2AA0B2B}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -219,6 +219,38 @@
 									<ObjectRef Name="Music_Mix_Loop_Final" ID="{A87167FC-DA7A-48D6-93DB-637FE0F2CCAB}" WorkUnitID="{251EC048-2365-4661-A743-BCD66AED47CF}"/>
 								</Reference>
 							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PauseAll" ID="{5B06839D-3739-4000-94BB-0B40219E1A2F}">
+					<ChildrenList>
+						<Action Name="" ID="{064C093B-9136-47E4-8407-2743C87DAD11}" ShortID="462936055">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="8"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="StopAll" ID="{8CE709AB-F2A2-4CB1-9CC5-B5F6CD27AD50}">
+					<ChildrenList>
+						<Action Name="" ID="{02AAF3D7-260E-4048-AA68-9283C3EB8F46}" ShortID="9381919">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ResumeAll" ID="{9DC2C24D-D8C7-4C7D-A3CD-028D39E4EC46}">
+					<ChildrenList>
+						<Action Name="" ID="{ECDFCECA-76D5-470B-81F9-E3032ADDBA0C}" ShortID="170363931">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="10"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
 						</Action>
 					</ChildrenList>
 				</Event>

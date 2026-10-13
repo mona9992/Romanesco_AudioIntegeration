@@ -10,19 +10,11 @@
     "Type": "User",
     "GUID": "{33C1E371-6BBE-44D6-A0E8-23D1DB64CC4F}",
     "Language": "SFX",
-    "Hash": "{F27D5FE7-08CB-52B8-8B48-6485FFC48484}",
+    "Hash": "{2804FFA6-8939-F56C-6050-BF264A5BA705}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
     "Media": [
-     {
-      "Id": "83115186",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "LoseStreak.wav",
-      "CachePath": "4B/{4B11528A-B1D3-D073-7AD2-E94BD267D7ED}.wem"
-     },
      {
       "Id": "101808808",
       "Language": "SFX",
@@ -30,6 +22,14 @@
       "Location": "Memory",
       "ShortName": "Enemy_Shooting-002.wav",
       "CachePath": "46/{46FAF906-7F20-F410-B70C-7605FC0BCE01}.wem"
+     },
+     {
+      "Id": "104282647",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "LoseStreak01.wav",
+      "CachePath": "66/{66E66E2F-E338-53EF-FFB3-D14E25674B8B}.wem"
      },
      {
       "Id": "185643576",
@@ -40,12 +40,12 @@
       "CachePath": "FB/{FB59A654-2114-02EF-43E2-2FC815523D99}.wem"
      },
      {
-      "Id": "290945462",
+      "Id": "208251785",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "UI_Shuffle_01.wav",
-      "CachePath": "44/{447ED638-4051-625C-FB25-7590E214B3B8}.wem"
+      "ShortName": "UI_Shuffle_02.wav",
+      "CachePath": "D0/{D035B434-A00F-8121-F746-8FC6FBDE7657}.wem"
      },
      {
       "Id": "340245751",
@@ -70,14 +70,6 @@
       "Location": "Memory",
       "ShortName": "Player_ProjectileHit_03.wav",
       "CachePath": "28/{2830742F-CAC8-EF18-B963-EA34A97A2FE2}.wem"
-     },
-     {
-      "Id": "421223786",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Enemy_Move.wav",
-      "CachePath": "36/{36C133E3-473D-B08C-8B9B-80D8E34E4011}.wem"
      },
      {
       "Id": "464971558",
@@ -118,14 +110,6 @@
       "Location": "Memory",
       "ShortName": "UI_Click.wav",
       "CachePath": "9D/{9DD649E3-3041-6A4E-3D25-137468F83F00}.wem"
-     },
-     {
-      "Id": "730077792",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "UI_Ranking.wav",
-      "CachePath": "09/{098D50A5-342E-D2A5-63CF-9A90F7872A01}.wem"
      },
      {
       "Id": "737938010",
@@ -176,6 +160,22 @@
       "CachePath": "48/{48A681CE-0037-4CA4-A852-542A4081EF4A}.wem"
      },
      {
+      "Id": "949783017",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MeleeEnemy_MovementSound_01.wav",
+      "CachePath": "66/{66E87443-0998-9399-79EA-880B05449744}.wem"
+     },
+     {
+      "Id": "988014905",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI_Ranking_01.wav",
+      "CachePath": "56/{56993102-F5F9-80D8-6499-ED4206A70146}.wem"
+     },
+     {
       "Id": "1026132113",
       "Language": "SFX",
       "Streaming": "false",
@@ -217,7 +217,7 @@
       "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "421223786"
+        "Id": "949783017"
        }
       ]
      },
@@ -269,11 +269,11 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Gameplay\\Play_LoseStreak",
       "GUID": "{88B744EA-2616-460B-AA15-75AEE80C2B79}",
       "DurationType": "OneShot",
-      "DurationMin": "1.0076644",
-      "DurationMax": "1.0076644",
+      "DurationMin": "1.156644",
+      "DurationMax": "1.156644",
       "MediaRefs": [
        {
-        "Id": "83115186"
+        "Id": "104282647"
        }
       ]
      },
@@ -407,11 +407,11 @@
       "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_Ranking",
       "GUID": "{51B075E2-9BB0-41AD-B9EA-CE389DBCD3F2}",
       "DurationType": "OneShot",
-      "DurationMin": "1.8287075",
-      "DurationMax": "1.8287075",
+      "DurationMin": "1.5429251",
+      "DurationMax": "1.5429251",
       "MediaRefs": [
        {
-        "Id": "730077792"
+        "Id": "988014905"
        }
       ]
      },
@@ -430,16 +430,16 @@
       ]
      },
      {
-      "Id": "1114247248",
-      "Name": "Play_UI_Shuffle_01",
-      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_Shuffle_01",
+      "Id": "2496650610",
+      "Name": "Play_UI_Shuffle",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Play_UI_Shuffle",
       "GUID": "{278D2C68-A1D7-40EF-90AE-6046E9F28810}",
       "DurationType": "OneShot",
       "DurationMin": "1.5073242",
       "DurationMax": "1.5073242",
       "MediaRefs": [
        {
-        "Id": "290945462"
+        "Id": "208251785"
        }
       ]
      },
@@ -476,6 +476,6 @@
     ]
    }
   ],
-  "FileHash": "{04B7801A-3386-28E8-ACED-3BD60A50BF86}"
+  "FileHash": "{E6D456E6-B968-64C4-19AD-D52F417F88B4}"
  }
 }

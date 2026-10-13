@@ -30,7 +30,7 @@ namespace AK
         static const AkUniqueID PLAY_UI_LOGINPASS = 3395035529U;
         static const AkUniqueID PLAY_UI_RANKING = 1501876387U;
         static const AkUniqueID PLAY_UI_SCENELOAD = 3253771689U;
-        static const AkUniqueID PLAY_UI_SHUFFLE_01 = 1114247248U;
+        static const AkUniqueID PLAY_UI_SHUFFLE = 2496650610U;
         static const AkUniqueID RESUMEALL = 3240900869U;
         static const AkUniqueID STOP_ENEMY_MOVE = 3172192928U;
         static const AkUniqueID STOPALL = 3086540886U;
